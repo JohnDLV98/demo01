@@ -16,10 +16,25 @@ public class Producto {
 
     public String getNombre(){
         return Nombre;
-    }
-    
+    }    
     public void setNombre(String nombre){
         Nombre = nombre;
+    }
+
+
+    public String getDescripcion(){
+        return Descripcion;
+    }
+    public void setSDescripcion(String descripcion){
+        Descripcion = descripcion;
+    } 
+    
+    
+    public double getPrecio(){
+        return Precio;
+    }
+    public void setPrecio(double precio){
+        Precio = precio;
     }
 
     

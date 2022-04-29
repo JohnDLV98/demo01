@@ -1,5 +1,5 @@
 package proyecto;
 
-public class Admin {
+public class Admin extends Persona{
     
 }
