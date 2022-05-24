@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class Pedido {
     private Mesa Mesa;
-    private DetallePedido PeditoTotal[];
+    private DetallePedido[] PeditoTotal;
 
     
     public Pedido(proyecto.Mesa mesa, DetallePedido[] peditoTotal) {
@@ -38,5 +38,11 @@ public class Pedido {
         return "Pedido [Mesa=" + Mesa + ", PeditoTotal=" + Arrays.toString(PeditoTotal) + "]";
     }
 
-    
+    public void ModificarPedido(Mesa mesa, DetallePedido[] PedidoTotal){
+
+    }
+
+    public void ReiniciarMesa(Mesa mesa, DetallePedido[] PedidoTotal){
+
+    }
 }

@@ -49,6 +49,12 @@ public class DetallePedido {
                 + "]";
     }
 
-    
+    public static void ModificarDetallePedido(String Especificacion, int Cantidad, Producto producto) {
+        
+    }
+
+    public static void EliminarReiniciarPedido() {
+        
+    }
 
 }

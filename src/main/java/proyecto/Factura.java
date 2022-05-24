@@ -5,21 +5,13 @@ import java.util.Calendar;
 public class Factura {
     private Calendar Fecha;
     private String ModoPago;
-    private int idFactura;
+    private int IdFactura;
     private Pedido Pedido;
     private Persona Cliente;
     private Persona AdminAprobacion;
 
-
-    public Factura(Calendar fecha, String modoPago, int idFactura, proyecto.Pedido pedido, Persona cliente,
-            Persona adminAprobacion) {
-        Fecha = fecha;
-        ModoPago = modoPago;
-        this.idFactura = idFactura;
-        Pedido = pedido;
-        Cliente = cliente;
-        AdminAprobacion = adminAprobacion;
-    }
+    
+   
 
 
     public Calendar getFecha() {
@@ -43,12 +35,12 @@ public class Factura {
 
 
     public int getIdFactura() {
-        return idFactura;
+        return IdFactura;
     }
 
 
     public void setIdFactura(int idFactura) {
-        this.idFactura = idFactura;
+        this.IdFactura = idFactura;
     }
 
 
@@ -85,10 +77,44 @@ public class Factura {
     @Override
     public String toString() {
         return "Factura [AdminAprobacion=" + AdminAprobacion + ", Cliente=" + Cliente + ", Fecha=" + Fecha
-                + ", ModoPago=" + ModoPago + ", Pedido=" + Pedido + ", idFactura=" + idFactura + "]";
+                + ", ModoPago=" + ModoPago + ", Pedido=" + Pedido + ", idFactura=" + IdFactura + "]";
     }
     
 
+    public void GenerarInformacion(Calendar fecha, String ModoPago, int IdFactura, proyecto.Pedido pedido, Persona cliente,
+    Persona adminAprobacion){
+
+    }
     
-    
+    public boolean RealizarPago(String ModoPago, proyecto.Pedido pedido){
+        
+        
+        return true;
+    }
+
+    public void ObtenerInfoPago(){
+
+    }
+
+    public boolean AplicarDescuentoCliente(Persona Cliente){
+
+        return false;
+    }
+
+    public void AcumulardorCompraDia(){
+
+    }
+
+    public void ReiniciarFactura(){
+
+    }
+
+    public double TotalAPagarAcumualdor(int IdFactura, Pedido pedido){
+        double a=1;
+        return a;
+    }
+
+    public void AprobacionAdmin(){
+        
+    }
 }

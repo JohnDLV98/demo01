@@ -61,7 +61,13 @@ public class Producto {
                 + ", Precio=" + Precio + "]";
     }
 
-    
+    public static void ModificarProducto(String Nombre, String Descripcion, double Precio, boolean Disponibilidad) {
+        
+    }
+
+    public static void EliminarProducto() {
+        
+    }
 
     
 }

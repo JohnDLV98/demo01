@@ -21,5 +21,12 @@ public class Cliente extends Persona{
         return "Cliente [AcumuladorCompra=" + AcumuladorCompra + "]";
     }
 
+    public void ContadorCompra(){
+
+    }
+
+    public void ModificarCliente(String nombre){
+
+    }
         
 }

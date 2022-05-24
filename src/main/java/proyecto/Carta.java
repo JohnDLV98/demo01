@@ -32,7 +32,13 @@ public class Carta {
         return "Carta [Nombre=" + Nombre + ", Producto=" + Arrays.toString(Producto) + "]";
     }
 
-    
+    public void ModificarNombre(String Nombre) {
+        
+    }
+
+    public void EliminarCarta() {
+        
+    }
     
     
 }
