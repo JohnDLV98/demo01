@@ -49,21 +49,7 @@ public class Main{
        
 
             
-            System.out.println(products.toString()); 
-                
-            
-
-
-
-
-
-
-
-
-
-
-
-        
+            System.out.println(products.toString());  
         
 
         
