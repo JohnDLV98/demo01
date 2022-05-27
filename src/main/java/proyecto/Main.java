@@ -177,7 +177,15 @@ public class Main{
                             salir = in.next();
                 }while(salir.equals("si"));
 
-                System.out.println(AcumProducto);
+                        List<Mesa> mesaCant = new ArrayList<Mesa>();
+                        System.out.println("Cuantas mesas hay en su negocio? ");
+                        int n = in.nextInt();
+
+                        for (int i = 0; i < n; i++) {
+                            mesaCant.add(new Mesa(i+1, true));
+                        }
+
+                        
 
     }
 }

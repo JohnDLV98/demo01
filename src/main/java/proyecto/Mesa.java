@@ -3,41 +3,56 @@ package proyecto;
 import java.util.Arrays;
 
 public class Mesa {
-    private String Nombre;
-    private Producto[] Producto;
+    private int Numero;
+    private boolean Estado;
 
     
-    public Mesa(String nombre, proyecto.Producto[] producto) {
-        Nombre = nombre;
-        Producto = producto;
+    
+
+    public Mesa(int numero, boolean estado) {
+        Numero = numero;
+        Estado = estado;
     }
 
 
-    public String getNombre() {
-        return Nombre;
+
+
+    public int getNumero() {
+        return Numero;
     }
 
 
-    public void setNombre(String nombre) {
-        Nombre = nombre;
+
+
+    public void setNumero(int numero) {
+        Numero = numero;
     }
 
 
-    public Producto[] getProducto() {
-        return Producto;
+
+
+    public boolean isEstado() {
+        return Estado;
     }
 
 
-    public void setProducto(Producto[] producto) {
-        Producto = producto;
+
+
+    public void setEstado(boolean estado) {
+        Estado = estado;
     }
+
+
 
 
     @Override
     public String toString() {
-        return "Mesa [Nombre=" + Nombre + ", Producto=" + Arrays.toString(Producto) + "]";
+        return "Mesa\n [Estado=  " + Estado + "\n Numero=  " + Numero + "\n]";
     }
 
+    
+    
+    
     
     
 }
