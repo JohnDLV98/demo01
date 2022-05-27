@@ -6,6 +6,11 @@ public class Producto {
     private double Precio;
     private boolean Disponibilidad;   
 
+    
+
+    public Producto() {
+    }
+
 
     public Producto(String nombre, String descripcion, double precio, boolean disponibilidad) {
         Nombre = nombre;
@@ -57,8 +62,11 @@ public class Producto {
 
     @Override
     public String toString() {
-        return "Producto [Descripcion=" + Descripcion + ", Disponibilidad=" + Disponibilidad + ", Nombre=" + Nombre
-                + ", Precio=" + Precio + "]";
+        return "Producto \n{" 
+        + "\n\tNombre: " + Nombre 
+        + "\n\tDescripcion: " + Descripcion 
+        + "\n\tPrecio: " + Precio 
+        + "\n\tDisponibilidad: " + Disponibilidad + "\n}";
     }
 
     public static void ModificarProducto(String Nombre, String Descripcion, double Precio, boolean Disponibilidad) {

@@ -1,10 +1,12 @@
 package proyecto;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 
 public class Carta {
     private String Nombre;
     private Producto[] Producto;
+    private ArrayList<Producto> productos;
     
     public Carta(String nombre, proyecto.Producto[] producto) {
         Nombre = nombre;
