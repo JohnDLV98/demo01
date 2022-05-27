@@ -83,17 +83,18 @@ public class Main{
                 List<DetallePedido> AcumProducto = new ArrayList<DetallePedido>();
                 String ped;
                 String codOrder;
+                String salir;
                 do{
+                    Scanner in = new Scanner(System.in);
                     System.out.println("De cual carta desea el producto para su Pedido?");
                     System.out.print(
                                 "\nCartas\n"
                                 + "0 - Comidas Rapidas\n"
                                 + "1 - Almuerzos\n"
-                                + "2 - Arroces\n"
-                                + "999 - Salir\n"
+                                + "2 - Arroces\n"                                
                                 + "Seleccione una opción >> "
                         );
-                    ped = in.next();
+                    ped = in.nextLine();
 
                     System.out.println("Estos son los productos:\n");
                     switch(ped){
@@ -104,7 +105,7 @@ public class Main{
                             codOrder = in.next();    
                             
                             for (Producto productoCr : comidaRapida) {
-                                if(productoCr.getNombre()==codOrder){
+                                if(productoCr.getIdProducto().equals(codOrder)){
 
                                     System.out.println("Ingrese Cantidad que desea :");
                                         int cant = in.nextInt();
@@ -118,8 +119,8 @@ public class Main{
                                     System.out.println("NO EXISTE NINGUN PRODUCTO CON ÉSTE CÓDIGO...");
                                 }
                             }
-
                             break;
+
                         case "1":
                             System.out.println("Almuerzos\n");
                             System.out.println(almuerzo);
@@ -128,7 +129,7 @@ public class Main{
                             codOrder = in.next();    
                             
                             for (Producto productoCr : almuerzo) {
-                                if(productoCr.getNombre()==codOrder){
+                                if(productoCr.getIdProducto().equals(codOrder)){
 
                                     System.out.println("Ingrese Cantidad que desea :");
                                         int cant = in.nextInt();
@@ -143,15 +144,16 @@ public class Main{
                                 }
                             }
                             break;
+
                         case "2":
                             System.out.println("Arroces\n");
                             System.out.println(arroz);
 
                             System.out.println("Escriba el codigo del producto que desea ordenar: \n");
-                            codOrder = in.next();    
+                            codOrder = in.nextLine();    
                             
                             for (Producto productoCr : arroz) {
-                                if(productoCr.getNombre()==codOrder){
+                                if(productoCr.getIdProducto().equals(codOrder)){
 
                                     System.out.println("Ingrese Cantidad que desea :");
                                         int cant = in.nextInt();
@@ -165,18 +167,17 @@ public class Main{
                                     System.out.println("NO EXISTE NINGUN PRODUCTO CON ÉSTE CÓDIGO...");
                                 }
                             }
-                            break;                            
-                        default:
-                            System.out.println("Opción inválida");
-                    }                
-                }while(ped.equals("999"));
-            
-        
+                            break;
 
-        
-        
-            
-        
+                        default:
+                            System.out.println("Opción inválida");                            
+                    }                
+
+                            System.out.println("Desea Pedir Otro Producto ? \n Escriba si o no en minusculas \n");
+                            salir = in.next();
+                }while(salir.equals("si"));
+
+                System.out.println(AcumProducto);
 
     }
 }

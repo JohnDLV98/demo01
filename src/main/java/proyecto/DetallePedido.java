@@ -45,8 +45,10 @@ public class DetallePedido {
 
     @Override
     public String toString() {
-        return "DetallePedido [Cantidad=" + Cantidad + ", Especificacion=" + Especificacion + ", Producto=" + Producto
-                + "]";
+        return "Detalles del Pedido\n{" 
+        + "\n\tCantidad: " + Cantidad   
+        + "\n\tEspecificación: " + Especificacion         
+        + "\n\tProducto: " + Producto.toString() + "\n}";
     }
 
     public static void ModificarDetallePedido(String Especificacion, int Cantidad, Producto producto) {
