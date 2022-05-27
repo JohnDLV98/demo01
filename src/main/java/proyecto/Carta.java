@@ -53,7 +53,7 @@ public class Carta {
     public String toString() {
         return "Carta \n{" 
         + "\n\tNombre: " + Nombre 
-        + "\n\tProductos: " + ProductoCarta.toString() + "\n}";
+        + "\n\tProductos: " + ProductoCarta + "\n}";
     }
 
     public void ModificarNombre(String Nombre) {

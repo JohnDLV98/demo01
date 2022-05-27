@@ -1,6 +1,7 @@
 package proyecto;
 
 public class Producto {
+    private String IdProducto;
     private String Nombre;
     private String Descripcion;
     private double Precio;
@@ -11,13 +12,29 @@ public class Producto {
     public Producto() {
     }
 
+    
 
-    public Producto(String nombre, String descripcion, double precio, boolean disponibilidad) {
+    public Producto(String idProducto, String nombre, String descripcion, double precio, boolean disponibilidad) {
+        IdProducto = idProducto;
         Nombre = nombre;
         Descripcion = descripcion;
         Precio = precio;
         Disponibilidad = disponibilidad;
     }
+
+
+
+
+    public String getIdProducto() {
+        return IdProducto;
+    }
+
+
+
+    public void setIdProducto(String idProducto) {
+        IdProducto = idProducto;
+    }
+
 
 
     public String getNombre() {
@@ -25,9 +42,11 @@ public class Producto {
     }
 
 
+
     public void setNombre(String nombre) {
         Nombre = nombre;
     }
+
 
 
     public String getDescripcion() {
@@ -35,9 +54,11 @@ public class Producto {
     }
 
 
+
     public void setDescripcion(String descripcion) {
         Descripcion = descripcion;
     }
+
 
 
     public double getPrecio() {
@@ -45,14 +66,17 @@ public class Producto {
     }
 
 
+
     public void setPrecio(double precio) {
         Precio = precio;
     }
 
 
-    public boolean getDisponibilidad() {
+
+    public boolean isDisponibilidad() {
         return Disponibilidad;
     }
+
 
 
     public void setDisponibilidad(boolean disponibilidad) {
@@ -60,9 +84,11 @@ public class Producto {
     }
 
 
+
     @Override
     public String toString() {
         return "Producto \n{" 
+        + "\n\tCodigo: " + IdProducto   
         + "\n\tNombre: " + Nombre 
         + "\n\tDescripcion: " + Descripcion 
         + "\n\tPrecio: " + Precio 
