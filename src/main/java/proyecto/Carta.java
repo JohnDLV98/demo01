@@ -2,36 +2,58 @@ package proyecto;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 public class Carta {
-    private String Nombre;
-    private Producto[] Producto;
-    private ArrayList<Producto> productos;
+    private String Nombre;    
+    private ArrayList<Producto> ProductoCarta;  
     
-    public Carta(String nombre, proyecto.Producto[] producto) {
+
+   
+
+    public Carta(String nombre, List<Producto> ProductoCarta) {
         Nombre = nombre;
-        Producto = producto;
+        this.ProductoCarta = (ArrayList<Producto>) ProductoCarta;
     }
+
+    public Carta(){
+
+    }
+
+
+    
+    
 
     public String getNombre() {
         return Nombre;
     }
 
+
+
     public void setNombre(String nombre) {
         Nombre = nombre;
     }
 
-    public Producto[] getProducto() {
-        return Producto;
+
+
+    public ArrayList<Producto> getProducto() {
+        return ProductoCarta;
     }
 
-    public void setProducto(Producto[] producto) {
-        Producto = producto;
+
+
+    public void setProducto(ArrayList<Producto> producto) {
+        this.ProductoCarta = producto;
     }
+
+
+    
 
     @Override
     public String toString() {
-        return "Carta [Nombre=" + Nombre + ", Producto=" + Arrays.toString(Producto) + "]";
+        return "Carta \n{" 
+        + "\n\tNombre: " + Nombre 
+        + "\n\tProductos: " + ProductoCarta.toString() + "\n}";
     }
 
     public void ModificarNombre(String Nombre) {
@@ -41,6 +63,9 @@ public class Carta {
     public void EliminarCarta() {
         
     }
+
+
+    
     
     
 }
