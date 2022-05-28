@@ -7,6 +7,7 @@ public class Cliente extends Persona{
         super(nombre, apellido, identificacion, telefono);
         AcumuladorCompra = acumuladorCompra;
     }
+    
 
     public double getAcumuladorCompra() {
         return AcumuladorCompra;

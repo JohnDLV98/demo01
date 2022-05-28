@@ -12,6 +12,7 @@ public class Persona {
         Identificacion = identificacion;
         Telefono = telefono;
     }
+    
 
     public String getNombre() {
         return Nombre;

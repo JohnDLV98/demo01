@@ -1,7 +1,7 @@
 package proyecto;
 
 import java.util.ArrayList;
-import java.util.List;
+import java.util.Calendar;
 import java.util.Scanner;
 
 /**
@@ -20,14 +20,22 @@ public class Main{
         
         in = new Scanner(System.in);
               
-        List<Producto> comidaRapida = new ArrayList<Producto>();
-        List<Producto> arroz = new ArrayList<Producto>();
-        List<Producto> almuerzo = new ArrayList<Producto>();
-        List<Carta> carta = new ArrayList<Carta>();
-        String x;
-       
+        ArrayList<Producto> comidaRapida = new ArrayList<Producto>();
+        ArrayList<Producto> arroz = new ArrayList<Producto>();
+        ArrayList<Producto> almuerzo = new ArrayList<Producto>();
+        ArrayList<Carta> carta = new ArrayList<Carta>();
+        String x;        
+        ArrayList<Mesa> mesaCant = new ArrayList<Mesa>();
+                
+                System.out.println("Cuantas mesas hay en su negocio? ");
+                int n = in.nextInt();
 
-      
+                for (int i = 0; i < n; i++) {
+                    
+                    mesaCant.add(new Mesa(i+1, true));
+                    
+                }
+                        
                 do{
                     Scanner in = new Scanner(System.in);
                     Scanner solox = new Scanner(System.in);
@@ -80,7 +88,7 @@ public class Main{
 
 
 
-                List<DetallePedido> AcumProducto = new ArrayList<DetallePedido>();
+                ArrayList<DetallePedido> AcumProducto = new ArrayList<DetallePedido>();
                 String ped;
                 String codOrder;
                 String salir;
@@ -177,15 +185,60 @@ public class Main{
                             salir = in.next();
                 }while(salir.equals("si"));
 
-                        List<Mesa> mesaCant = new ArrayList<Mesa>();
-                        System.out.println("Cuantas mesas hay en su negocio? ");
-                        int n = in.nextInt();
 
-                        for (int i = 0; i < n; i++) {
-                            mesaCant.add(new Mesa(i+1, true));
+                    Pedido prod = new Pedido();
+                    String sal;
+                    int mes;
+
+                    do{
+                        Scanner m = new Scanner(System.in);
+                    System.out.println();
+                    System.out.println("Escriba el Numero de la Mesa donde se lleva el pedido ?  hay un total de " + mesaCant.size() + " Mesas.");
+                    
+                    mes = m.nextInt();                   
+                    
+                        for (Mesa mesa : mesaCant) {
+                            if(mesa.getNumero()==mes){
+                                if(mesa.isEstado()==true){
+                                prod = new Pedido(mesa, AcumProducto);
+                                System.out.println("MESA Disponible");
+                                }                               
+                            }
+
                         }
+                    
 
-                        
+                        System.out.println("Ya encontró mesa ? escriba si o no");
+                        sal = in.next();
+                    }while(sal.equals("no"));                  
+                    
+
+                 
+
+                    System.out.println("Ingrese nombre cliente :");
+                String nom = in.next(); 
+
+                System.out.println("Ingrese Apellido del cliente :");
+                String apell = in.next();
+
+                System.out.println("Ingrese Identificacion del cliente :");
+                int id = in.nextInt();
+                
+                System.out.println("Ingrese Telefono del cliente :");
+                int tel = in.nextInt();
+                
+                Cliente cl1= new Cliente(nom, apell, id, tel, 0);
+                Admin adm1= new Admin("Angie", "Lapeira", 12324354, 893847, "usuario", 123456);
+                
+                Calendar today = Calendar.getInstance();
+                System.out.println("Today is " + today.getTime());
+
+                Factura fac1= new Factura("Efectivo", 345665, prod, cl1, adm1);
+
+                System.out.println(fac1);
+                               
+
+
 
     }
 }

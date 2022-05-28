@@ -1,6 +1,6 @@
 package proyecto;
 
-import java.util.Arrays;
+
 
 public class Mesa {
     private int Numero;
@@ -47,7 +47,9 @@ public class Mesa {
 
     @Override
     public String toString() {
-        return "Mesa\n [Estado=  " + Estado + "\n Numero=  " + Numero + "\n]";
+        return "Mesa \n{" 
+        + "\n\tNumero De Mesa: " + Numero 
+        + "\n\tDisponibilidad: " + Estado + "\n}";
     }
 
     

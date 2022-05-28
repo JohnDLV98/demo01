@@ -7,16 +7,35 @@ public class Factura {
     private String ModoPago;
     private int IdFactura;
     private Pedido Pedido;
-    private Persona Cliente;
-    private Persona AdminAprobacion;
+    private Cliente Cliente;
+    private Admin AdminAprobacion;
 
     
    
 
 
+    public Factura(String modoPago, int idFactura, proyecto.Pedido pedido, proyecto.Cliente cliente,
+            Admin adminAprobacion) {
+    
+        ModoPago = modoPago;
+        IdFactura = idFactura;
+        Pedido = pedido;
+        Cliente = cliente;
+        AdminAprobacion = adminAprobacion;
+    }
+
+
+    
+    
+    
+
     public Calendar getFecha() {
         return Fecha;
     }
+
+
+
+
 
 
     public void setFecha(Calendar fecha) {
@@ -24,9 +43,17 @@ public class Factura {
     }
 
 
+
+
+
+
     public String getModoPago() {
         return ModoPago;
     }
+
+
+
+
 
 
     public void setModoPago(String modoPago) {
@@ -34,14 +61,26 @@ public class Factura {
     }
 
 
+
+
+
+
     public int getIdFactura() {
         return IdFactura;
     }
 
 
+
+
+
+
     public void setIdFactura(int idFactura) {
-        this.IdFactura = idFactura;
+        IdFactura = idFactura;
     }
+
+
+
+
 
 
     public Pedido getPedido() {
@@ -49,37 +88,67 @@ public class Factura {
     }
 
 
+
+
+
+
     public void setPedido(Pedido pedido) {
         Pedido = pedido;
     }
 
 
-    public Persona getCliente() {
+
+
+
+
+    public Cliente getCliente() {
         return Cliente;
     }
 
 
-    public void setCliente(Persona cliente) {
+
+
+
+
+    public void setCliente(Cliente cliente) {
         Cliente = cliente;
     }
 
 
-    public Persona getAdminAprobacion() {
+
+
+
+
+    public Admin getAdminAprobacion() {
         return AdminAprobacion;
     }
 
 
-    public void setAdminAprobacion(Persona adminAprobacion) {
+
+
+
+
+    public void setAdminAprobacion(Admin adminAprobacion) {
         AdminAprobacion = adminAprobacion;
     }
 
 
+    
+
+
+
+    
+
     @Override
     public String toString() {
-        return "Factura [AdminAprobacion=" + AdminAprobacion + ", Cliente=" + Cliente + ", Fecha=" + Fecha
-                + ", ModoPago=" + ModoPago + ", Pedido=" + Pedido + ", idFactura=" + IdFactura + "]";
+        return "Factura \n{"
+        + "\n\tID FACTURA: " + IdFactura         
+        + "\n\tCliente: " + Cliente
+        + "\n\tModo Pago: " + ModoPago
+        + "\n\tPedido del Cliente: " + Pedido
+        + "\n\tAdminitrador: " + AdminAprobacion.getNombre()+ " " + AdminAprobacion.getApellido() + "\n}";
     }
-    
+
 
     public void GenerarInformacion(Calendar fecha, String ModoPago, int IdFactura, proyecto.Pedido pedido, Persona cliente,
     Persona adminAprobacion){

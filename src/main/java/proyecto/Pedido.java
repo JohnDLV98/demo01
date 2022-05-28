@@ -1,16 +1,23 @@
 package proyecto;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 
 public class Pedido {
     private Mesa Mesa;
-    private DetallePedido[] PeditoTotal;
+    private ArrayList<DetallePedido> PedidoTotal;    
+    
+
+    public Pedido(proyecto.Mesa mesa, ArrayList<DetallePedido> pedidoTotal) {
+        Mesa = mesa;
+        PedidoTotal = pedidoTotal;
+    }
 
     
-    public Pedido(proyecto.Mesa mesa, DetallePedido[] peditoTotal) {
-        Mesa = mesa;
-        PeditoTotal = peditoTotal;
+
+    public Pedido() {
     }
+
 
 
     public Mesa getMesa() {
@@ -18,25 +25,31 @@ public class Pedido {
     }
 
 
+
     public void setMesa(Mesa mesa) {
         Mesa = mesa;
     }
 
 
-    public DetallePedido[] getPeditoTotal() {
-        return PeditoTotal;
+
+    public ArrayList<DetallePedido> getPedidoTotal() {
+        return PedidoTotal;
     }
 
 
-    public void setPeditoTotal(DetallePedido[] peditoTotal) {
-        PeditoTotal = peditoTotal;
+
+    public void setPedidoTotal(ArrayList<DetallePedido> pedidoTotal) {
+        PedidoTotal = pedidoTotal;
     }
 
+    
 
     @Override
     public String toString() {
-        return "Pedido [Mesa=" + Mesa + ", PeditoTotal=" + Arrays.toString(PeditoTotal) + "]";
+        return "Pedido [Mesa=" + Mesa + ", PedidoTotal=" + PedidoTotal + "]";
     }
+
+
 
     public void ModificarPedido(Mesa mesa, DetallePedido[] PedidoTotal){
 

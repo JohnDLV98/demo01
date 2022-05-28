@@ -26,10 +26,7 @@ public class Admin extends Persona{
         Clave = clave;
     }
 
-    @Override
-    public String toString() {
-        return "Admin [Clave=" + Clave + ", Usuario=" + Usuario + "]";
-    }
+   
 
     
 
